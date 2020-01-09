@@ -7,7 +7,7 @@
       {
           "type": "node",
           "request": "launch",
-          "name": "调试webpack",
+          "name": "webpack-demo",
           "cwd": "${workspaceFolder}/webpack-demo/01.basic",
           "skipFiles": [
               "<node_internals>/**"
