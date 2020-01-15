@@ -1,6 +1,9 @@
-import { helloworld } from './helloworld';
-import { c } from './c';
+// import { helloworld } from './helloworld';
+// import { c } from './c';
 
-document.write(helloworld());
+// document.write(helloworld());
+// console.log(c())
 
-console.log(c())
+const { x } = require('./x.js')
+
+console.log(x)

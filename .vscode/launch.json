@@ -7,7 +7,7 @@
       {
           "type": "node",
           "request": "launch",
-          "name": "webpack-demo",
+          "name": "webpack-01basic",
           "cwd": "${workspaceFolder}/webpack-demo/01.basic",
           "skipFiles": [
               "<node_internals>/**"
@@ -20,6 +20,38 @@
           "console": "integratedTerminal",
           "port": 9229,
           "stopOnEntry": true
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "webpack-demo-03plugins",
+        "cwd": "${workspaceFolder}/webpack-demo/03.plugins",
+        "skipFiles": [
+            "<node_internals>/**"
+        ],
+        "runtimeExecutable": "node",
+        "runtimeArgs": [
+            "--inspect-brk=9229",
+            "${workspaceFolder}/webpack-demo/01.basic/node_modules/.bin/webpack",
+        ],
+        "console": "integratedTerminal",
+        "port": 9229,
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "webpack-demo-02loader",
+        "cwd": "${workspaceFolder}/webpack-demo/02.loader",
+        "skipFiles": [
+            "<node_internals>/**"
+        ],
+        "runtimeExecutable": "node",
+        "runtimeArgs": [
+            "--inspect-brk=9229",
+            "${workspaceFolder}/webpack-demo/01.basic/node_modules/.bin/webpack",
+        ],
+        "console": "integratedTerminal",
+        "port": 9229,
       }
   ]
 }
