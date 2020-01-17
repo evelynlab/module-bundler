@@ -1,6 +1,12 @@
-import { a, b as bIna } from './a'
-import { b } from './b'
+// import { a } from './a.js'
 
-console.log(a)
-console.log(b)
-console.log(bIna)
+console.log('index.js')
+
+// const a = []
+// const b = Array.isArray(a)
+
+// console.log(a)
+
+// (async () => { 
+//   await console.log('lalala')
+// })()
