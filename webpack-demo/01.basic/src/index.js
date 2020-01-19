@@ -4,6 +4,6 @@
 // document.write(helloworld());
 // console.log(c())
 
-const { x } = require('./x.js')
+const { b } = require('./b.js')
 
-console.log(x)
+console.log(b)

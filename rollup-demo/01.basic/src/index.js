@@ -1,6 +1,6 @@
-import { a, b as bIna } from './a'
+// import { a, b as bIna } from './a'
 import { b } from './b'
 
-console.log(a)
+// console.log(a)
 console.log(b)
-console.log(bIna)
+// console.log(bIna)
