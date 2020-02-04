@@ -7,7 +7,7 @@
       {
           "type": "node",
           "request": "launch",
-          "name": "webpack-01basic",
+          "name": "webpack-demo-01basic",
           "cwd": "${workspaceFolder}/webpack-demo/01.basic",
           "skipFiles": [
               "<node_internals>/**"
@@ -69,6 +69,7 @@
         ],
         "console": "integratedTerminal",
         "port": 9229,
+        "stopOnEntry": true
       }
   ]
 }
