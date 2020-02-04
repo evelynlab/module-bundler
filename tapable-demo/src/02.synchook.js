@@ -32,3 +32,24 @@ myCar.hooks.accelarate.tap('eventname2', (speed) => {
 })
 
 myCar.hooks.accelarate.call(50) // createCall时，已经根据之前tap，生成了call时的代码。 call执行时，会依次执行callback代码
+
+
+myCar.hooks.accelarate.intercept({
+  register: (tapInfo) => {
+      // console.log('tapInfo', tapInfo)
+      // console.log('tapInfo.name', tapInfo.name)
+      if (tapInfo.name === 'eventname1') {
+        // console.log('hh')
+        tapInfo.type = 'async' // 允许改变它
+        // tapInfo.fn = () => {}
+      } 
+      console.log(tapInfo)
+      return tapInfo
+  },
+  call: () => {
+    
+  },
+  tap: () => {
+
+  }
+})
