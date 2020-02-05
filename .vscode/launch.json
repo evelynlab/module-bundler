@@ -79,6 +79,22 @@
         "console": "integratedTerminal",
         "port": 9229,
         "stopOnEntry": true
+      },{
+        "type": "node",
+        "request": "launch",
+        "name": "webpack-demo-05-file-loader",
+        "cwd": "${workspaceFolder}/webpack-demo/05.file-loader",
+        "skipFiles": [
+            "<node_internals>/**"
+        ],
+        "runtimeExecutable": "node",
+        "runtimeArgs": [
+            "--inspect-brk=9229",
+            "${workspaceFolder}/webpack-demo/05.file-loader/node_modules/.bin/webpack",
+            "-c"
+        ],
+        "console": "integratedTerminal",
+        "port": 9229,
       }
   ]
 }
