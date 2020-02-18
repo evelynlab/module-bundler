@@ -1,3 +1,9 @@
 import { b } from './b.es6.js'
 
-console.log('b', b)
+class Test {
+}
+
+const test = new Test()
+console.log(`template string: ${test}}`)
+console.log('b', `${b}hahaha`)
+
