@@ -10,5 +10,5 @@ module.exports = {
         filename: '[name].js'
     },
     devtool: 'source-map',
-    mode: 'development',
+    mode: 'development', // development, production
 };
