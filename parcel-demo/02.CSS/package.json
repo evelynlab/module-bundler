@@ -1,0 +1,17 @@
+{
+  "name": "01.basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev-html": "parcel ./src/index.html",
+    "dev-js": "parcel ./src/index.js",
+    "build": "parcel build ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
