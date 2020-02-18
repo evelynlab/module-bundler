@@ -1,9 +1,5 @@
-const event = require('events')
+const EventEmitter = require('events').EventEmitter; 
 
-class EventEmitter extends event {
-}
-
-// const events = new event()
 const events = new EventEmitter()
 
 // 1.on emit basic demo
