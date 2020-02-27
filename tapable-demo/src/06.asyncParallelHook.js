@@ -11,20 +11,58 @@ class Car {
 
 const myCar = new Car()
 
-myCar.hooks.accelarate.tapAsync('eventname1', (speed) => {
-  console.log('speed cb 1:', speed)
-  // process.nextTick
+// 1. tap
+// myCar.hooks.accelarate.tap('eventname1', (speed) => {
+//   console.log('speed cb 1:', speed)
+// })
+
+// myCar.hooks.accelarate.tap('eventname2', (speed) => {
+//   console.log('speed cb 2:', speed)
+// })
+
+// myCar.hooks.accelarate.callAsync(50, (err) => {
+//   console.log('end') // 
+// })
+
+// 2. tapAsync
+// myCar.hooks.accelarate.tapAsync('eventname1', (speed, cb) => {
+//   setTimeout(() => {
+//     console.log(1, speed);
+//     cb();
+// }, 1000);
+// })
+
+// myCar.hooks.accelarate.tapAsync('eventname2', (speed, cb) => {
+//   setTimeout(() => {
+//     console.log(2, speed);
+//     cb();
+// }, 2000);
+// })
+
+// myCar.hooks.accelarate.callAsync(50, () => {
+//   console.log('end') // 
+// })
+
+// 3.tapPromise
+myCar.hooks.accelarate.tapPromise('eventname1', (speed, cb) => {
+  return new Promise(function (resolve, reject) {
+    setTimeout(() => {
+        console.log(1, speed);
+        resolve();
+    }, 1000);
+  });
 })
 
-myCar.hooks.accelarate.tapAsync('eventname2', (speed) => { // 如果有上一个传递过来的值则取出，否则取出正常的参数
-  // process.nextTick(() => {
-  //   console.log('speed cb 2:', speed)
-  // })
-  setTimeout(() => {
-    console.log('speed cb 2:', speed)
-  }, 3000)
+myCar.hooks.accelarate.tapPromise('eventname2', (speed, cb) => {
+  return new Promise(function (resolve, reject) {
+    setTimeout(() => {
+        console.log(2, speed);
+        resolve();
+    }, 2000);
+  });
 })
 
-myCar.hooks.accelarate.callAsync(50, (err) => {
-  console.log('end') // ?
+myCar.hooks.accelarate.promise(50).then(() => {
+  console.log('end')
 })
+
